@@ -12,10 +12,16 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Remove Old Yarn Version
-          command: sudo rm -rf /usr/local/bin/yarn /usr/local/bin/yarnpkg
-      - node/install-yarn:
-          version: 4.0.0
+          name: Install Yarn 4.0.0 using Corepack
+          command: |
+            corepack enable
+            corepack prepare yarn@4.0.0 --activate
+      - run:
+          name: Check Yarn Version
+          command: yarn --version
+      - node/install-packages:
+          pkg-manager: yarn
+          with-cache: true
       - node/install-packages:
           pkg-manager: yarn
           with-cache: true
