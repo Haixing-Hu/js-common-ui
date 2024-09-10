@@ -11,6 +11,9 @@ jobs:
       resource_class: medium
     steps:
       - checkout
+      - run:
+          name: Remove Old Yarn Version
+          command: sudo rm -rf /usr/local/bin/yarn /usr/local/bin/yarnpkg
       - node/install-yarn:
           version: 4.0.0
       - node/install-packages:
