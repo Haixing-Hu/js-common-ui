@@ -16,15 +16,10 @@ jobs:
           command: |
             sudo corepack enable
             sudo corepack prepare yarn@4.0.0 --activate
-      - run:
-          name: Check Yarn Version
-          command: yarn --version
       - node/install-packages:
           pkg-manager: yarn
           with-cache: true
-      - node/install-packages:
-          pkg-manager: yarn
-          with-cache: true
+          override-ci-command: yarn install --immutable
       - run:
           name: Lint the Source Code
           command: yarn lint
