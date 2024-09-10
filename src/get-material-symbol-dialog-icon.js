@@ -22,7 +22,7 @@ function getMaterialSymbolDialogIcon(type) {
     case 'warning':
       return `<i class="material-symbols-rounded" style="${baseStyle} color: #F2C037;">warning</i>`;
     case 'error':
-      return `<i class="material-symbols-rounded" style="${baseStyle} color: #C10015;">error</i>`;
+      return `<i class="material-symbols-rounded" style="${baseStyle} color: #C10015;">cancel</i>`;
     case 'success':
       return `<i class="material-symbols-rounded" style="${baseStyle} color: #21BA45;">check_circle</i>`;
     case 'debug':
