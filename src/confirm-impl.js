@@ -1,0 +1,41 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//    Copyright (c) 2022 - 2024.
+//    Haixing Hu, Qubit Co. Ltd.
+//
+//    All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * 弹出式确认对话框的具体实现类。
+ *
+ * 这个具体实现类，需要被子类覆盖实现。不同的UI框架应有不同的实现。
+ *
+ * @author 胡海星
+ */
+class ConfirmImpl {
+  /**
+   * 显示一个弹出式确认对话框。
+   *
+   * @param {string} type
+   *     可选参数，表示对话框的消息类型。
+   * @param {string} title
+   *     对话框的标题。
+   * @param {string} message
+   *     对话框中的文字内容。
+   * @param {string} okLabel
+   *     可选参数，表示确认按钮的文字，默认值为`'确认'`。
+   * @param {string} cancelLabel
+   *     可选参数，表示放弃按钮的文字，默认值为`'取消'`。
+   * @return {Promise<void>}
+   *     一个`Promise`对象，当用户点击对话框的确认按键后，则Promise resolve，可以接着
+   *     `then`继续下一步操作；当用户点击对话框的放弃按键后，则Promise reject，可以接着
+   *     `catch`继续下一步操作。如果此对象被禁用，则返回一个`rejected`状态的`Promise`对象。
+   */
+  show(type, title, message, okLabel, cancelLabel) {
+    throw new Error(`方法 ConfirmImpl.show() 需要被子类覆盖实现: ${type} - ${title} - ${message} - ${okLabel} - ${cancelLabel}`);
+  }
+}
+
+export default ConfirmImpl;
