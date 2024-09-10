@@ -11,6 +11,8 @@ jobs:
       resource_class: medium
     steps:
       - checkout
+      - node/install-yarn:
+          version: 4.0.0
       - node/install-packages:
           pkg-manager: yarn
           with-cache: true
