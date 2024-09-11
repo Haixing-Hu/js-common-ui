@@ -132,7 +132,7 @@ class Alert {
    *     对话框中的文字内容。
    * @return {Promise<void>}
    *     一个`Promise`对象，当用户点击对话框的`OK`按键后，可以接着`then`继续下一步操作。
-   *     如果此对象被禁用，则返回一个`rejected`状态的`Promise`对象。
+   *     如果此对象被禁用，则返回一个`resolved`状态的`Promise`对象。
    */
   show(type, title, message) {
     if (!this.enabled) {
@@ -176,7 +176,7 @@ class Alert {
    *     对话框中的文字内容。
    * @return {Promise<void>}
    *     一个`Promise`对象，当用户点击对话框的`OK`按键后，可以接着`then`继续下一步操作。
-   *     如果此对象被禁用，则返回一个`rejected`状态的`Promise`对象。
+   *     如果此对象被禁用，则返回一个`resolved`状态的`Promise`对象。
    */
   info(title, message) {
     return this.show('info', title, message);

@@ -1499,7 +1499,7 @@ __metadata:
     "@babel/runtime": "npm:^7.23.6"
     "@haixing_hu/eslint-config": "npm:^1.3.1"
     "@haixing_hu/jsdoc-minami": "npm:^1.5.1"
-    "@haixing_hu/logging": "npm:^1.2.4"
+    "@haixing_hu/logging": "npm:^1.3.1"
     "@haixing_hu/rollup-builder": "npm:^1.5.0"
     "@jest/core": "npm:^29.7.0"
     "@rollup/plugin-alias": "npm:^5.0.1"
@@ -1525,7 +1525,7 @@ __metadata:
     rollup-plugin-visualizer: "npm:^5.12.0"
   peerDependencies:
     "@babel/runtime": ^7.23.6
-    "@haixing_hu/logging": ^1.2.4
+    "@haixing_hu/logging": ^1.3.1
   languageName: unknown
   linkType: soft
 
@@ -1550,12 +1550,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@haixing_hu/logging@npm:^1.2.4":
-  version: 1.2.4
-  resolution: "@haixing_hu/logging@npm:1.2.4"
+"@haixing_hu/logging@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "@haixing_hu/logging@npm:1.3.1"
   peerDependencies:
     "@babel/runtime": ^7.23.0
-  checksum: 26f30b5a89dee006a2ea674ca559c3b54c63a3cf1cde1161f441f739acbd2ce7f5821a1844b10d1ca5de1665029504d26c888a8b271548b23870322cb3ab3683
+  checksum: 345ed501ad6d7b5d9473bdec953c9be60ede0a8bad1684fa29e68913a7a8763b5305cecfcee8696960d7eba0dfd4d7e89bae9ebb9fbd83ce680a630949fc5b5a
   languageName: node
   linkType: hard
 
