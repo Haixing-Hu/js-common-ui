@@ -1,6 +1,6 @@
 {
   "name": "@haixing_hu/common-ui",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "A JavaScript abstraction layer for common UI components.",
   "author": "Haixing Hu (starfish.hu@gmail.com)",
   "license": "Apache-2.0",
@@ -17,12 +17,12 @@
     "UI",
     "abstract"
   ],
-  "main": "dist/common-ui.cjs.min.js",
-  "module": "dist/common-ui.esm.min.mjs",
+  "main": "dist/common-ui.min.cjs",
+  "module": "dist/common-ui.min.mjs",
   "exports": {
     ".": {
-      "require": "./dist/common-ui.cjs.min.js",
-      "import": "./dist/common-ui.esm.min.mjs"
+      "require": "./dist/common-ui.min.cjs",
+      "import": "./dist/common-ui.min.mjs"
     }
   },
   "sideEffects": false,
@@ -37,16 +37,16 @@
     "clean": "rm -rvf dist doc",
     "build": "cross-env NODE_ENV=production rollup -c rollup.config.mjs",
     "build:dev": "cross-env NODE_ENV=development rollup -c rollup.config.mjs",
-    "build:all": "yarn clean && yarn doc && yarn build:dev && yarn build",
+    "build:all": "npm run clean && npm run doc && npm run build:dev && npm run build",
     "test": "jest --passWithNoTests",
     "lint": "eslint ./src",
     "doc": "jsdoc -c jsdoc.json",
     "es5": "check-es-version -e 5 -s true",
-    "deploy": "yarn && yarn lint && yarn test && yarn build:all && npm publish --registry='https://registry.npmjs.com/' --access public"
+    "deploy": "npm run lint && npm run test && npm run build:all && npm publish --registry='https://registry.npmjs.com/' --access public"
   },
   "peerDependencies": {
     "@babel/runtime": "^7.23.6",
-    "@haixing_hu/logging": "^1.3.3"
+    "@haixing_hu/logging": "^1.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.23.6",
@@ -58,8 +58,8 @@
     "@babel/runtime": "^7.23.6",
     "@haixing_hu/eslint-config": "^1.3.3",
     "@haixing_hu/jsdoc-minami": "^1.5.1",
-    "@haixing_hu/logging": "^1.3.3",
-    "@haixing_hu/rollup-builder": "^1.6.5",
+    "@haixing_hu/logging": "^1.4.1",
+    "@haixing_hu/rollup-builder": "^1.8.2",
     "@jest/core": "^29.7.0",
     "@rollup/plugin-alias": "^5.0.1",
     "@rollup/plugin-babel": "^6.0.4",
