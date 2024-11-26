@@ -19,7 +19,7 @@ class AlertImpl {
    * 显示一个弹出式对话框。
    *
    * @param {string} type
-   *     对话框的类型，可取值为：`'info'`, `'success'`, `'warning'`, `'error'`, `'debug'`。
+   *     对话框的类型，可取值为：`'info'`, `'success'`, `'warn'`, `'error'`, `'debug'`。
    * @param {string} title
    *     对话框的标题。
    * @param {string} message

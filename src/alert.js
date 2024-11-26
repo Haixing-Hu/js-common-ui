@@ -125,7 +125,7 @@ class Alert {
    * 注意：此方法在显示弹出式对话框之前会清除当前的`loading`遮盖层。
    *
    * @param {string} type
-   *     对话框的类型，可取值为：`'info'`, `'success'`, `'warning'`, `'error'`, `'debug'`。
+   *     对话框的类型，可取值为：`'info'`, `'success'`, `'warn'`, `'error'`, `'debug'`。
    * @param {string} title
    *     对话框的标题。
    * @param {string} message
@@ -148,7 +148,7 @@ class Alert {
       case 'info':
         logger.info(message);
         break;
-      case 'warning':
+      case 'warn':
         logger.warn(message);
         break;
       case 'error':
@@ -193,8 +193,8 @@ class Alert {
    *     一个`Promise`对象，当用户点击对话框的`OK`按键后，可以接着`then`继续下一步操作。
    *     如果此对象被禁用，则返回一个`rejected`状态的`Promise`对象。
    */
-  warning(title, message) {
-    return this.show('warning', title, message);
+  warn(title, message) {
+    return this.show('warn', title, message);
   }
 
   /**

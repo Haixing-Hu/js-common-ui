@@ -19,7 +19,7 @@
 function getMaterialSymbolDialogIcon(type) {
   const baseStyle = "font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;";
   switch (type) {
-    case 'warning':
+    case 'warn':
       return `<i class="material-symbols-rounded" style="${baseStyle} color: #F2C037;">warning</i>`;
     case 'error':
       return `<i class="material-symbols-rounded" style="${baseStyle} color: #C10015;">cancel</i>`;

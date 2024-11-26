@@ -18,7 +18,7 @@
  */
 function getFontAwesomeDialogIcon(type) {
   switch (type) {
-    case 'warning':
+    case 'warn':
       return '<i class="fa-solid fa-triangle-exclamation fa-lg" style="color: #F2C037"></i>';
     case 'error':
       return '<i class="fa-solid fa-circle-xmark fa-lg" style="color: #C10015"></i>';

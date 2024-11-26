@@ -93,7 +93,7 @@ class Confirm {
    * 显示一个弹出式确认对话框。
    *
    * @param {string} type
-   *     对话框的消息类型，可取值为：`'info'`, `'success'`, `'warning'`, `'error'`, `'debug'`。
+   *     对话框的消息类型，可取值为：`'info'`, `'success'`, `'warn'`, `'error'`, `'debug'`。
    * @param {string} title
    *     对话框的标题。
    * @param {string} message
@@ -121,7 +121,7 @@ class Confirm {
       case 'info':
         logger.info(message);
         break;
-      case 'warning':
+      case 'warn':
         logger.warn(message);
         break;
       case 'error':
@@ -176,8 +176,8 @@ class Confirm {
    *     `then`继续下一步操作；当用户点击对话框的放弃按键后，则Promise reject，可以接着
    *     `catch`继续下一步操作。如果此对象被禁用，则返回一个`rejected`状态的`Promise`对象。
    */
-  warning(title, message, okLabel = DEFAULT_OK_LABEL, cancelLabel = DEFAULT_CANCEL_LABEL) {
-    return this.show('warning', title, message, okLabel, cancelLabel);
+  warn(title, message, okLabel = DEFAULT_OK_LABEL, cancelLabel = DEFAULT_CANCEL_LABEL) {
+    return this.show('warn', title, message, okLabel, cancelLabel);
   }
 
   /**
