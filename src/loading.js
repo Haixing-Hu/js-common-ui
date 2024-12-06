@@ -152,6 +152,13 @@ class Loading {
   }
 
   /**
+   * 显示一个遮盖层，提示正在下载数据。
+   */
+  showDownloading() {
+    this.show('正在下载，请稍后……');
+  }
+
+  /**
    * 清除当前Loading的遮盖层，隐藏Loading提示框。
    *
    * 如果此对象被禁用，则不做任何操作。
