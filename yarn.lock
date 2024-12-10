@@ -1722,8 +1722,8 @@ __metadata:
     rollup-plugin-analyzer: "npm:^4.0.0"
     rollup-plugin-visualizer: "npm:^5.12.0"
   peerDependencies:
-    "@babel/runtime": ^7.23.6
-    "@haixing_hu/logging": ^1.4.1
+    "@babel/runtime": ^7.26.0
+    "@haixing_hu/logging": ^1.4.3
   languageName: unknown
   linkType: soft
 
