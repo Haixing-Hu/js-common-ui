@@ -152,6 +152,13 @@ class Loading {
   }
 
   /**
+   * 显示一个遮盖层，提示正在上传数据。
+   */
+  showUploading() {
+    this.show('正在上传，请稍后……');
+  }
+
+  /**
    * 显示一个遮盖层，提示正在下载数据。
    */
   showDownloading() {
