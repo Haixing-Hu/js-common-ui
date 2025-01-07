@@ -6,7 +6,7 @@
 //    All rights reserved.
 //
 ////////////////////////////////////////////////////////////////////////////////
-import { Logger } from '@haixing_hu/logging';
+import { Logger } from '@qubit-ltd/logging';
 import loading from './loading';
 import AlertImpl from './alert-impl';
 
