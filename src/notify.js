@@ -122,8 +122,6 @@ class Notify {
    *
    * @param {string} type
    *     消息的类型，可取值为：`'info'`, `'success'`, `'warn'`, `'error'`, `'debug'`。
-   * @param {string} title
-   *     消息的标题。
    * @param {string} message
    *     消息的内容，**支持HTML代码。**
    * @param {object} options
@@ -140,7 +138,7 @@ class Notify {
    *     - `detailLabel` {string} 详细信息按钮上的文本。默认值为`'显示详情'`。
    *     - `detailAction` {function} 详细信息按钮的点击处理函数。默认值为`null`。
    */
-  show(type, title, message, options = {}) {
+  show(type, message, options = {}) {
     if (!this.enabled) {
       return;
     }
@@ -169,14 +167,12 @@ class Notify {
         logger.info(message);
         break;
     }
-    this.impl.show(type, title, message, options);
+    this.impl.show(type, message, options);
   }
 
   /**
    * 弹出一个显示普通信息的消息。
    *
-   * @param {string} title
-   *     消息的标题。
    * @param {string} message
    *     消息中的文字内容。
    * @param {object} options
@@ -193,15 +189,13 @@ class Notify {
    *     - `detailLabel` {string} 详细信息按钮上的文本。默认值为`'显示详情'`。
    *     - `detailAction` {function} 详细信息按钮的点击处理函数。默认值为`null`。
    */
-  info(title, message, options = {}) {
-    this.show('info', title, message, options);
+  info(message, options = {}) {
+    this.show('info', message, options);
   }
 
   /**
    * 弹出一个显示警告信息的消息。
    *
-   * @param {string} title
-   *     消息的标题。
    * @param {string} message
    *     消息中的文字内容。
    * @param {object} options
@@ -218,15 +212,13 @@ class Notify {
    *     - `detailLabel` {string} 详细信息按钮上的文本。默认值为`'显示详情'`。
    *     - `detailAction` {function} 详细信息按钮的点击处理函数。默认值为`null`。
    */
-  warn(title, message, options = {}) {
-    this.show('warn', title, message, options);
+  warn(message, options = {}) {
+    this.show('warn', message, options);
   }
 
   /**
    * 弹出一个显示错误信息的消息。
    *
-   * @param {string} title
-   *     消息的标题。
    * @param {string} message
    *     消息中的文字内容。
    * @param {object} options
@@ -243,15 +235,13 @@ class Notify {
    *     - `detailLabel` {string} 详细信息按钮上的文本。默认值为`'显示详情'`。
    *     - `detailAction` {function} 详细信息按钮的点击处理函数。默认值为`null`。
    */
-  error(title, message, options = {}) {
-    this.show('error', title, message, options);
+  error(message, options = {}) {
+    this.show('error', message, options);
   }
 
   /**
    * 弹出一个显示成功信息的消息。
    *
-   * @param {string} title
-   *     消息的标题。
    * @param {string} message
    *     消息中的文字内容。
    * @param {object} options
@@ -268,8 +258,8 @@ class Notify {
    *     - `detailLabel` {string} 详细信息按钮上的文本。默认值为`'显示详情'`。
    *     - `detailAction` {function} 详细信息按钮的点击处理函数。默认值为`null`。
    */
-  success(title, message, options = {}) {
-    this.show('success', title, message, options);
+  success(message, options = {}) {
+    this.show('success', message, options);
   }
 
   /**
@@ -296,7 +286,7 @@ class Notify {
    */
   debug(message, options = {}) {
     if (this.debugEnabled) {
-      this.show('debug', '调试', message, options);
+      this.show('debug', message, options);
     }
   }
 }

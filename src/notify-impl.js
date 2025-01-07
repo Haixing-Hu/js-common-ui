@@ -20,8 +20,6 @@ class NotifyImpl {
    *
    * @param {string} type
    *     消息的类型，可取值为：`'info'`, `'success'`, `'warn'`, `'error'`, `'debug'`。
-   * @param {string} title
-   *     消息的标题。
    * @param {string} message
    *     消息的内容，**支持HTML代码**。但**使用时要小心，防止XSS攻击**。
    * @param {object} options
@@ -36,8 +34,8 @@ class NotifyImpl {
    *     - `detailLabel` {string} 详细信息按钮上的文本。
    *     - `detailAction` {function} 详细信息按钮的点击处理函数。
    */
-  show(type, title, message, options) {
-    throw new Error(`方法 NotifyImpl.show() 需要被子类覆盖实现: ${type} - ${title} - ${message} - ${options}`);
+  show(type, message, options) {
+    throw new Error(`方法 NotifyImpl.show() 需要被子类覆盖实现: ${type} - ${message} - ${options}`);
   }
 }
 
