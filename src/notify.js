@@ -167,7 +167,18 @@ class Notify {
         logger.info(message);
         break;
     }
-    this.impl.show(type, message, options);
+    const actualOptions = {
+      position: 'top-right',
+      duration: 3000,
+      icon: null,
+      closeable: true,
+      closeAction: null,
+      showDetail: false,
+      detailLabel: '显示详情',
+      detailAction: null,
+      ...options,
+    };
+    this.impl.show(type, message, actualOptions);
   }
 
   /**
