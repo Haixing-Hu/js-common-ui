@@ -133,10 +133,10 @@ class Notify {
    *     - `icon` {string} 自定义的消息图标，如不提供则使用`type`参数指定的默认图标。
    *       默认值为`null`。
    *     - `closeable` {boolean} 是否显示关闭消息按钮。默认值为`true`。
-   *     - `closeAction` {function} 关闭消息按钮的点击处理函数。默认值为`null`。
+   *     - `closeAction` {function} 关闭消息按钮的点击处理函数。默认值为`() => {}`。
    *     - `showDetail` {boolean} 是否显示详细信息按钮。默认值为`false`。
    *     - `detailLabel` {string} 详细信息按钮上的文本。默认值为`'显示详情'`。
-   *     - `detailAction` {function} 详细信息按钮的点击处理函数。默认值为`null`。
+   *     - `detailAction` {function} 详细信息按钮的点击处理函数。默认值为`() => {}`。
    */
   show(type, message, options = {}) {
     if (!this.enabled) {
@@ -172,10 +172,10 @@ class Notify {
       duration: 3000,
       icon: null,
       closeable: true,
-      closeAction: null,
+      closeAction: () => {},
       showDetail: false,
-      detailLabel: '显示详情',
-      detailAction: null,
+      detailLabel: '详情',
+      detailAction: () => {},
       ...options,
     };
     this.impl.show(type, message, actualOptions);
