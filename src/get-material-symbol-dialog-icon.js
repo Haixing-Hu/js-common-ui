@@ -1,11 +1,19 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
-//    Copyright (c) 2017 - 2024.
-//    Nanjing Smart Medical Investment Operation Service Co. Ltd.
+//    Copyright (c) 2022 - 2025.
+//    Haixing Hu, Qubit Co. Ltd.
 //
 //    All rights reserved.
 //
 ////////////////////////////////////////////////////////////////////////////////
+import {
+  ICON_COLOR_WARN,
+  ICON_COLOR_ERROR,
+  ICON_COLOR_SUCCESS,
+  ICON_COLOR_DEBUG,
+  ICON_COLOR_QUESTION,
+  ICON_COLOR_INFO,
+} from './impl/icon-config';
 
 /**
  * 获取不同类型对话框对应的 Material Symbol 图标。
@@ -20,18 +28,18 @@ function getMaterialSymbolDialogIcon(type) {
   const baseStyle = "font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;";
   switch (type) {
     case 'warn':
-      return `<i class="material-symbols-rounded" style="${baseStyle} color: #F2C037;">warning</i>`;
+      return `<i class="material-symbols-rounded" style="${baseStyle} color: ${ICON_COLOR_WARN};">warning</i>`;
     case 'error':
-      return `<i class="material-symbols-rounded" style="${baseStyle} color: #C10015;">cancel</i>`;
+      return `<i class="material-symbols-rounded" style="${baseStyle} color: ${ICON_COLOR_ERROR};">cancel</i>`;
     case 'success':
-      return `<i class="material-symbols-rounded" style="${baseStyle} color: #21BA45;">check_circle</i>`;
+      return `<i class="material-symbols-rounded" style="${baseStyle} color: ${ICON_COLOR_SUCCESS};">check_circle</i>`;
     case 'debug':
-      return `<i class="material-symbols-rounded" style="${baseStyle} color: #9C27B0;">bug_report</i>`;
+      return `<i class="material-symbols-rounded" style="${baseStyle} color: ${ICON_COLOR_DEBUG};">bug_report</i>`;
     case 'question':
-      return `<i class="material-symbols-rounded" style="${baseStyle} color: #1976D2;">help</i>`;
+      return `<i class="material-symbols-rounded" style="${baseStyle} color: ${ICON_COLOR_QUESTION};">help</i>`;
     case 'info':
     default:
-      return `<i class="material-symbols-rounded" style="${baseStyle} color: #1976D2;">info</i>`;
+      return `<i class="material-symbols-rounded" style="${baseStyle} color: ${ICON_COLOR_INFO};">info</i>`;
   }
 }
 
