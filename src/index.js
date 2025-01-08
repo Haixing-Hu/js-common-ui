@@ -16,7 +16,7 @@ import ConfirmImpl from './confirm-impl';
 import LoadingImpl from './loading-impl';
 import PromptImpl from './prompt-impl';
 import NotifyImpl from './notify-impl';
-import getColor from './get-color';
+import getCssColor from './get-css-color';
 import getFontAwesomeIcon from './get-font-awesome-icon';
 import getMaterialSymbolIcon from './get-material-symbol-icon';
 import getBootstrapIcon from './get-bootstrap-icon';
@@ -32,7 +32,7 @@ export {
   LoadingImpl,
   PromptImpl,
   NotifyImpl,
-  getColor,
+  getCssColor,
   getFontAwesomeIcon,
   getMaterialSymbolIcon,
   getBootstrapIcon,
