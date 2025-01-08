@@ -16,9 +16,10 @@ import ConfirmImpl from './confirm-impl';
 import LoadingImpl from './loading-impl';
 import PromptImpl from './prompt-impl';
 import NotifyImpl from './notify-impl';
-import getFontAwesomeDialogIcon from './get-font-awesome-dialog-icon';
-import getMaterialSymbolDialogIcon from './get-material-symbol-dialog-icon';
-import getBootstrapIconDialogIcon from './get-bootstrap-icon-dialog-icon';
+import getColor from './get-color';
+import getFontAwesomeIcon from './get-font-awesome-icon';
+import getMaterialSymbolIcon from './get-material-symbol-icon';
+import getBootstrapIcon from './get-bootstrap-icon';
 
 export {
   alert,
@@ -31,7 +32,8 @@ export {
   LoadingImpl,
   PromptImpl,
   NotifyImpl,
-  getFontAwesomeDialogIcon,
-  getMaterialSymbolDialogIcon,
-  getBootstrapIconDialogIcon,
+  getColor,
+  getFontAwesomeIcon,
+  getMaterialSymbolIcon,
+  getBootstrapIcon,
 };
