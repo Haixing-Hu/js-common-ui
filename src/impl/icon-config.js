@@ -7,7 +7,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-export const ICON_SIZE = '1.25em';
+export const ICON_SIZE = '1.5em';
 
 export const ICON_COLOR_WARN = '#F2C037';
 

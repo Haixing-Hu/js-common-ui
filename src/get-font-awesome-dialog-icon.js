@@ -7,6 +7,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 import {
+  ICON_SIZE,
   ICON_COLOR_WARN,
   ICON_COLOR_ERROR,
   ICON_COLOR_SUCCESS,
@@ -27,18 +28,18 @@ import {
 function getFontAwesomeDialogIcon(type) {
   switch (type) {
     case 'warn':
-      return `<i class="fa-solid fa-triangle-exclamation fa-lg" style="color: ${ICON_COLOR_WARN}"></i>`;
+      return `<i class="fa-solid fa-triangle-exclamation" style="font-size: ${ICON_SIZE}; color: ${ICON_COLOR_WARN}"></i>`;
     case 'error':
-      return `<i class="fa-solid fa-circle-xmark fa-lg" style="color: ${ICON_COLOR_ERROR}"></i>`;
+      return `<i class="fa-solid fa-circle-xmark" style="font-size: ${ICON_SIZE}; color: ${ICON_COLOR_ERROR}"></i>`;
     case 'success':
-      return `<i class="fa-solid fa-circle-check fa-lg" style="color: ${ICON_COLOR_SUCCESS}"></i>`;
+      return `<i class="fa-solid fa-circle-check" style="font-size: ${ICON_SIZE}; color: ${ICON_COLOR_SUCCESS}"></i>`;
     case 'debug':
-      return `<i class="fa-solid fa-bug-slash fa-lg" style="color: ${ICON_COLOR_DEBUG}"></i>`;
+      return `<i class="fa-solid fa-bug-slash" style="font-size: ${ICON_SIZE}; color: ${ICON_COLOR_DEBUG}"></i>`;
     case 'question':
-      return `<i class="fa-solid fa-circle-question fa-lg" style="color: ${ICON_COLOR_QUESTION}"></i>`;
+      return `<i class="fa-solid fa-circle-question" style="font-size: ${ICON_SIZE}; color: ${ICON_COLOR_QUESTION}"></i>`;
     case 'info':
     default:
-      return `<i class="fa-solid fa-circle-info fa-lg" style="color: ${ICON_COLOR_INFO}"></i>`;
+      return `<i class="fa-solid fa-circle-info" style="font-size: ${ICON_SIZE}; color: ${ICON_COLOR_INFO}"></i>`;
   }
 }
 

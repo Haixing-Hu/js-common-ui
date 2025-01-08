@@ -7,6 +7,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 import {
+  ICON_SIZE,
   ICON_COLOR_WARN,
   ICON_COLOR_ERROR,
   ICON_COLOR_SUCCESS,
@@ -25,21 +26,21 @@ import {
  * @author 胡海星
  */
 function getMaterialSymbolDialogIcon(type) {
-  const baseStyle = "font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;";
+  const baseStyle = "font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48";
   switch (type) {
     case 'warn':
-      return `<i class="material-symbols-rounded" style="${baseStyle} color: ${ICON_COLOR_WARN};">warning</i>`;
+      return `<i class="material-symbols-rounded" style="${baseStyle}; font-size: ${ICON_SIZE}; color: ${ICON_COLOR_WARN};">warning</i>`;
     case 'error':
-      return `<i class="material-symbols-rounded" style="${baseStyle} color: ${ICON_COLOR_ERROR};">cancel</i>`;
+      return `<i class="material-symbols-rounded" style="${baseStyle}; font-size: ${ICON_SIZE}; color: ${ICON_COLOR_ERROR};">cancel</i>`;
     case 'success':
-      return `<i class="material-symbols-rounded" style="${baseStyle} color: ${ICON_COLOR_SUCCESS};">check_circle</i>`;
+      return `<i class="material-symbols-rounded" style="${baseStyle}; font-size: ${ICON_SIZE}; color: ${ICON_COLOR_SUCCESS};">check_circle</i>`;
     case 'debug':
-      return `<i class="material-symbols-rounded" style="${baseStyle} color: ${ICON_COLOR_DEBUG};">bug_report</i>`;
+      return `<i class="material-symbols-rounded" style="${baseStyle}; font-size: ${ICON_SIZE}; color: ${ICON_COLOR_DEBUG};">bug_report</i>`;
     case 'question':
-      return `<i class="material-symbols-rounded" style="${baseStyle} color: ${ICON_COLOR_QUESTION};">help</i>`;
+      return `<i class="material-symbols-rounded" style="${baseStyle}; font-size: ${ICON_SIZE}; color: ${ICON_COLOR_QUESTION};">help</i>`;
     case 'info':
     default:
-      return `<i class="material-symbols-rounded" style="${baseStyle} color: ${ICON_COLOR_INFO};">info</i>`;
+      return `<i class="material-symbols-rounded" style="${baseStyle}; font-size: ${ICON_SIZE}; color: ${ICON_COLOR_INFO};">info</i>`;
   }
 }
 
