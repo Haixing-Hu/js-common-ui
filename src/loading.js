@@ -166,6 +166,20 @@ class Loading {
   }
 
   /**
+   * 显示一个遮盖层，提示正在导入数据。
+   */
+  showImporting() {
+    this.show('正在导入，请稍后……');
+  }
+
+  /**
+   * 显示一个遮盖层，提示正在导出数据。
+   */
+  showExporting() {
+    this.show('正在导出，请稍后……');
+  }
+
+  /**
    * 清除当前Loading的遮盖层，隐藏Loading提示框。
    *
    * 如果此对象被禁用，则不做任何操作。
@@ -177,7 +191,7 @@ class Loading {
     if (!this.impl) {
       throw new Error('未设置`Loading`类的具体实现对象，请调用`loading.setImpl()`方法设置');
     }
-    this.impl.hind();
+    this.impl.hide();
   }
 }
 

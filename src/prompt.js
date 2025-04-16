@@ -111,11 +111,11 @@ class Prompt {
   show(type, title, message, okLabel = DEFAULT_OK_LABEL, cancelLabel = DEFAULT_CANCEL_LABEL) {
     if (!this.enabled) {
       // 如果没有启用此对象，则不显示对话框，但应该返回一个rejected状态的Promise对象
-      return Promise.reject();
+      return Promise.reject(new Error('Prompt功能已被禁用'));
     }
     loading.clear();
     if (!this.impl) {
-      throw new Error('未设置`Prompt`类的具体实现对象，请调用`prompt.setImpl()`方法设置');
+      return Promise.reject(new Error('未设置`Prompt`类的具体实现对象，请调用`prompt.setImpl()`方法设置'));
     }
     const logger = Logger.getLogger('prompt');
     switch (type) {

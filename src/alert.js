@@ -141,7 +141,7 @@ class Alert {
     }
     loading.clear();
     if (!this.impl) {
-      throw new Error('未设置`Alert`类的具体实现对象，请调用`alert.setImpl()`方法设置');
+      return Promise.reject(new Error('未设置`Alert`类的具体实现对象，请调用`alert.setImpl()`方法设置'));
     }
     const logger = Logger.getLogger('alert');
     switch (type) {

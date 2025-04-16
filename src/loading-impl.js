@@ -28,8 +28,8 @@ class LoadingImpl {
   /**
    * 清除当前载入提示遮盖层，隐藏载入提示框。
    */
-  hind() {
-    throw new Error('方法 LoadingImpl.hind() 需要被子类覆盖实现');
+  hide() {
+    throw new Error('方法 LoadingImpl.hide() 需要被子类覆盖实现');
   }
 }
 
