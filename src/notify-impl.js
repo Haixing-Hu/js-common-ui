@@ -35,7 +35,7 @@ class NotifyImpl {
    *     - `detailAction` {function} 详细信息按钮的点击处理函数。
    */
   show(type, message, options) {
-    throw new Error(`方法 NotifyImpl.show() 需要被子类覆盖实现: ${type} - ${message} - ${options}`);
+    throw new Error(`方法 NotifyImpl.show() 需要被子类覆盖实现: ${type} - ${message} - ${JSON.stringify(options)}`);
   }
 }
 
